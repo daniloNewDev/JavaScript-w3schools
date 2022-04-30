@@ -60,3 +60,29 @@ function algumMenorTrinta(value, index, array) {
 console.log(pontosMenoresTrinta)
 
 //
+
+//O método 'indexOf()' procura o valor de um item em um array e retorna seu index(posição):
+const pecas = [2, 54, 85, 1, 8, 19, 54, 22]
+console.log(pecas.indexOf(8))
+//O método 'lastIndexOf()' retorna a posíção da última ocorrência do item dentro do array:
+console.log(pecas.lastIndexOf(54))
+
+//
+
+//O método 'find()' retorna o valor do primeiro item que passa por um teste(boolean):
+let ultMaior = pecas.find(lastBigger)
+
+function lastBigger(value, index, array) {
+     return value > 60
+}
+console.log(ultMaior)
+
+//
+
+//O método 'findIndex()'retorna o index(poisção) do primeiroitem do Array que passa pelo teste(boolean):
+const chaves = [3, 5, 91, 12, 43, 231]
+let encontChave = chaves.findIndex(encontrarIndex)
+function encontrarIndex(value, index, array) {
+     return value > 100
+}
+console.log(encontChave)
