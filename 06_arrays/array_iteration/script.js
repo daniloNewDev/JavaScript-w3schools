@@ -86,3 +86,32 @@ function encontrarIndex(value, index, array) {
      return value > 100
 }
 console.log(encontChave)
+
+//
+
+//O método 'keys()' retorna um Objeto Array iterador com as chaves de um Array:
+const feira2 = ["banana", "limão", "laranja", "uva"]
+const keys = feira2.keys()
+let texto = ""
+for (let h of keys) {
+     texto += h + "<br>"
+}
+document.getElementById('demostr2').innerHTML = texto
+
+//
+
+//O método 'entries()'itera os item sobre os pares de chave/valor:
+
+const feira3 = ["banana", "limão", "laranja", "uva"]
+const f = feira3.entries()
+
+for (let j of f) {
+     document.getElementById('demostr3').innerHTML += j + "<br>"
+}
+
+//
+
+//O método 'includes()', recentemente intraduzido no ECMAScript 2016, em arrays permite verificar se um elemento está presente em um array(incluindo NaN, ao contrário de 'indexOf()'):
+
+console.log(feira3.includes("limão"))
+
