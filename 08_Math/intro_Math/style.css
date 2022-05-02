@@ -1,0 +1,31 @@
+* {
+     margin: 0;
+     padding: 0;
+}
+
+body {
+     width: 100vw;
+     height: 100vh;
+     background-color: rgb(48, 50, 177);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.card {
+     width: 400px;
+     height: 300px;
+     background-color: rgb(48, 50, 177);
+     text-align: center;
+     border-radius: 20px;
+     box-shadow: 5px 5px 10px rgba(43, 40, 40, 0.801), -5px -5px 10px rgba(54, 53, 53, 0.767);
+     font-family: 'Bebas Neue', cursive;
+}
+
+/*////////     fim de .body e .card     ////////*/
+h1 {
+     background-color: rgba(211, 211, 211, 0.808);
+     width: 250px;
+     margin: 20px auto;
+     border-radius: 10px;
+}
