@@ -1,0 +1,90 @@
+* {
+     margin: 0;
+     padding: 0;
+}
+
+/*//////       Elementos do body centralizados         //////*/
+body {
+     width: 100vw;
+     height: 100vh;
+     background-color: black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+/*//////       Animação do .card        //////*/
+.card {
+     box-shadow: -5px -5px 10px rgb(63, 62, 62), 5px 5px 10px rgb(63, 62, 62);
+     width: 500px;
+     min-width: 350px;
+     height: 300px;
+     background-color: #151515;
+     color: #eee;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: 10px solid;
+     border-image:
+          linear-gradient(#080a6e,
+               #0c7709,
+               #aa590e) 1;
+     animation: rotate 2.5s ease-in infinite;
+}
+
+@keyframes rotate {
+     50% {
+          border-image:
+               linear-gradient(360deg,
+                    #630909,
+                    #56d30e,
+                    #ffe81c) 1;
+     }
+}
+
+/*//////       Animação do botão        //////*/
+
+.cta {
+     display: flex;
+     align-items: center;
+     border: none;
+     color: #fff;
+     background: none;
+     padding: 12px 18px;
+     position: relative;
+}
+
+.cta:before {
+     content: "";
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%) translateX(calc(100% + 4px));
+     width: 45px;
+     height: 45px;
+     background-color: #3d0868;
+     border-radius: 50px;
+     transition: transform .25s .25s cubic-bezier(0, 0, .5, 2), width .25s cubic-bezier(0, 0, .5, 2);
+     z-index: -1;
+}
+
+.cta:hover::before {
+     width: 100%;
+     transform: translateY(-50%) translateX(-18px);
+     transition: transf .25s cubic-bezier(0, 0, .5, 2), width .25s .25s cubic-bezier(0, 0, .5, 2);
+     z-index: 0;
+}
+
+p {
+     font-family: 'Prompt', sans-serif;
+     font-size: 2em;
+     z-index: 1;
+}
+
+.cta i {
+     margin-left: 5px;
+     transition: transf .25s .4s cubic-bezier(0, 0, .5, 2);
+}
+
+.cta:hover i {
+     transform: translateX(3px);
+}
