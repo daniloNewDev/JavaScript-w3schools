@@ -38,3 +38,27 @@ do {
 } while (ind < 10);
 document.getElementById("dem2").innerHTML = text2;
 //  No exemplo acima o código sempre será executado pelo menos uma vez na condição false, já que o bloco de código sempre será executado antes que a condição seja testada.
+
+//  Pode imaginar uma semelhança entre 'for' e 'while', analisando um 'for' com os 'statement 1' e o 'statement 2' omitidos:
+const carros = ["BMW", "Audi", "GMC", "Jeep", "Tesla"];
+
+let ic = 0;
+let textC = "";
+for (; carros[ic]; ) {
+  textC += carros[ic] + "<br>";
+  ic++;
+}
+//Usado 'for' omitindo statement 1 e 2;
+document.getElementById("dem3").innerHTML = textC;
+
+//
+
+//  O Loop no exemplo abaixo usa um 'while' para coletar os valores (nomes dos carros) do Array 'carros':
+let iw = 0;
+let textW = "";
+while (carros[iw]) {
+  textW += carros[iw] + "<br>";
+  iw++;
+}
+//Usado 'while' com a condição.
+document.getElementById("dem4").innerHTML = textW;
