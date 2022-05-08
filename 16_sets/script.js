@@ -88,4 +88,4 @@ for (const x of ivrit.values()) {
       }
 */
 console.log(textVal);
-//  Por meio de um 'for of', no lugar do objeto iterável é colocado o 'ivrit.values():
+//  Por meio de um 'for of', no lugar do objeto iterável é colocado o 'ivrit.values()'.
