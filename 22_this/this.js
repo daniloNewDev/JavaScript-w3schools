@@ -45,11 +45,50 @@ let btnNone = this;
 
 //Neste caso o "this" é o objeto 'user2':
 const user2 = {
-  nome: "Danilo",
-  sNome: "Leite",
+  firstName: "Danilo",
+  lastName: "Leite",
   id: 80,
   mFunc: function () {
     return this;
   },
 };
 console.log(user2.mFunc());
+
+const user3 = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 89,
+  fullName: function () {
+    return `${this.firstName} ${this.lastName}`;
+  },
+};
+//  this.firstName é a propriedade firstName deste objeto user3.
+console.log(user3.fullName());
+
+//    Explicit Function Binding   //
+
+//  Os métodos "call()" e "apply()" são métodos predefinidos do JavaScript. Ambos podem ser usados para chamar um método de objeto com outro objeto como argumento.
+
+const propriedades = {
+  descricao: function () {
+    return `${this.color}, ${this.width}, ${this.height} `;
+  },
+};
+const tela = {
+  color: "green",
+  width: "60vw",
+  height: "80vh",
+};
+console.log(propriedades.descricao.call(tela));
+
+//  Borrowing Function (Empréstimo de Função) //
+
+//  Com o método "bind()", um objeto pode emprestar um método de outro objeto. Este exemplo cria 2 objetos:
+const user4 = {
+  firstName: "Moshe",
+  lastName: "ben Adam",
+  id: 80,
+};
+//Com "bind()", o objeto "user3" empresta para a variável "fName" a função "fullName" para aplicar no objeto "user4":
+let fName = user3.fullName.bind(user4);
+console.log(fName());
