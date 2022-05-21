@@ -1,3 +1,7 @@
-## JavaScript_w3schools
+<h1>Curso JavaScript W3Schools</h1>
 
-# Neste repositório foi incluído todo o material de estudo do Tutorial JavaScript do Site W3Schools.
+<h2>Sobre</h2>
+
+<p>Neste Repositório foram incluídos os arquivos do material de estudos  do <b>Tutorial JavaScript</b> do site <b>W3Schools</b> (<a href="https://www.w3schools.com/js/default.asp">Tutorial JavaScript W3Schools</a>).</p>
+
+<p>No material de estudo, todas as aulas estão aplicadas em exemplos comentados.</p>
